@@ -10,33 +10,30 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Laravel 9 Python script run
+# Laravel 9 Python script run
 
 Running a Python script step by step within a Laravel application involves setting up a Laravel route, a controller, and then using Laravel's features to execute the Python script and display the results. Here's a step-by-step guide & command:
 
-###Step 1 : Clone git project 
+### Step 1 : Clone git project 
 ```
 git clone https://github.com/sanwarhossainkhan/laravel-python.git
 ```
 
-###Step 2 : Composer install 
-```
-Composer install
-```
-###Step 3 :  install 
+### Step 2 : Composer install 
 ```
 Composer install
 ```
 
-###Step 4 :  Server start 
+### Step 3 :  Server start 
 ```
 php artisan serve
 ```
 
-###Step 5 :  Check this url 
+### Step 4 :  Check this url 
 ```
 http://127.0.0.1:8000/call-python-script/typetext
 ```
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
