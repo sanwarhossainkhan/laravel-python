@@ -28,6 +28,17 @@ cd .\laravel-python\
 Composer install
 ```
 
+### Step 3 : Go To  App\Http\Controllers\PythonController.php file change python script path 'F:\laragon\www\laravel-python\' replace this with your python script path
+```
+public function callPythonScript(Request $request)
+    {
+        $name = $request->name;
+        $output = shell_exec("python F:\laragon\www\laravel-python\python-script\hello.py \"$name\"");
+        return response()->json(trim($output));
+
+  }
+```
+
 ### Step 4 :  Server start 
 ```
 php artisan serve
