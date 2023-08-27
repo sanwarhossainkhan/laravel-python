@@ -10,58 +10,71 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Laravel 9 Python script run
+# Running a Python Script in Laravel 9
 
-Running a Python script step by step within a Laravel application involves setting up a Laravel route, a controller, and then using Laravel's features to execute the Python script and display the results. Here's a step-by-step guide & command:
+Running a Python script step by step within a Laravel application involves setting up a Laravel route, a controller, and then using Laravel's features to execute the Python script and display the results.
 
-### Step 1 : Clone git project 
+### Step 1 :  Clone the Git Project
+
+Clone the repository by executing the following command in your terminal:
 ```
 git clone https://github.com/sanwarhossainkhan/laravel-python.git
+
 ```
-### Step 2 : Goto Project directory 
+### Step 2 : Navigate to the Project Directory
+
+Change to the project directory using the command:
 ```
-cd .\laravel-python\
+cd laravel-python
+
 ```
 
-### Step 3 : Composer install 
+### Step 3 : Install Dependencies with Composer
+
+Run the following command to install project dependencies using Composer:
 ```
-Composer install
+composer install
+
 ```
 
-### Step 4 : Go To  App\Http\Controllers\PythonController.php file.
+### Step 4 : Modify the Python Controller
 
-change python script path 'F:\laragon\www\laravel-python\' replace this with your python script path
+Navigate to the **PythonController.php** file located at **App\Http\Controllers\PythonController.php**.
+
+Update the **$output** line in the **callPythonScript** method to use the correct path to your Python script:
 ```
-public function callPythonScript(Request $request)
-    {
-        $name = $request->name;
-        $output = shell_exec("python F:\laragon\www\laravel-python\python-script\hello.py \"$name\"");
-        return response()->json(trim($output));
+$output = shell_exec("python path_to_your_python_script \"$name\" \"$age\"");
 
-  }
 ```
-### Step 5 :  Run this command 
+### Step 5 : Clear Optimize Cache
 
+Clear the optimize cache with the following command:
 ```
 php artisan optimize:clear
+
 ```
 
-### Step 6 :  Server start 
+### Step 6 :  Start the Server
 
+Start a development server with the command:
 ```
 php artisan serve
+
 ```
 
-### Step 7 :  Check this url 
+### Step 7 : Access the Python Script
 
+Access the Python script by navigating to:
 ```
 http://127.0.0.1:8000/call-python-script/typetext/age
 ```
 
-### Step 8 :  Output 
+### Step 8 :  Observe the Output
 
+You should see the output of the Python script:
 ```
 "Hello, sanowar! You are 21 years old."
+
 ```
 
 ## Contributing
