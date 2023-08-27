@@ -18,20 +18,50 @@ Running a Python script step by step within a Laravel application involves setti
 ```
 git clone https://github.com/sanwarhossainkhan/laravel-python.git
 ```
+### Step 2 : Goto Project directory 
+```
+cd .\laravel-python\
+```
 
-### Step 2 : Composer install 
+### Step 3 : Composer install 
 ```
 Composer install
 ```
 
-### Step 3 :  Server start 
+### Step 4 : Go To  App\Http\Controllers\PythonController.php file.
+
+change python script path 'F:\laragon\www\laravel-python\' replace this with your python script path
+```
+public function callPythonScript(Request $request)
+    {
+        $name = $request->name;
+        $output = shell_exec("python F:\laragon\www\laravel-python\python-script\hello.py \"$name\"");
+        return response()->json(trim($output));
+
+  }
+```
+### Step 5 :  Run this command 
+
+```
+php artisan optimize:clear
+```
+
+### Step 6 :  Server start 
+
 ```
 php artisan serve
 ```
 
-### Step 4 :  Check this url 
+### Step 7 :  Check this url 
+
 ```
-http://127.0.0.1:8000/call-python-script/typetext
+http://127.0.0.1:8000/call-python-script/typetext/age
+```
+
+### Step 8 :  Output 
+
+```
+"Hello, sanowar! You are 21 years old."
 ```
 
 ## Contributing
