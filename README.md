@@ -41,18 +41,27 @@ public function callPythonScript(Request $request)
   }
 ```
 ### Step 5 :  Run this command 
+
 ```
-php artisan optimize
+php artisan optimize:clear
 ```
 
 ### Step 6 :  Server start 
+
 ```
 php artisan serve
 ```
 
 ### Step 7 :  Check this url 
+
 ```
-http://127.0.0.1:8000/call-python-script/typetext
+http://127.0.0.1:8000/call-python-script/typetext/age
+```
+
+### Step 8 :  check this http://127.0.0.1:8000/call-python-script/sanowar/21 
+
+```
+"Hello, sanowar! You are 21 years old."
 ```
 
 ## Contributing
