@@ -18,18 +18,22 @@ Running a Python script step by step within a Laravel application involves setti
 ```
 git clone https://github.com/sanwarhossainkhan/laravel-python.git
 ```
+### Step 2 : Goto Project directory 
+```
+cd .\laravel-python\
+```
 
-### Step 2 : Composer install 
+### Step 3 : Composer install 
 ```
 Composer install
 ```
 
-### Step 3 :  Server start 
+### Step 4 :  Server start 
 ```
 php artisan serve
 ```
 
-### Step 4 :  Check this url 
+### Step 5 :  Check this url 
 ```
 http://127.0.0.1:8000/call-python-script/typetext
 ```
