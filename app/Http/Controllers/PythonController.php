@@ -13,7 +13,7 @@ class PythonController extends Controller
     {
         $name = $request->name;
         $age = $request->age;
-        $output = shell_exec("python F:\laragon\www\laravel-python\python-script\hello.py \"$name\" \"$age\"");
+        $output = shell_exec("python C:\laragon\www\laravel-python\python-script\hello.py \"$name\" \"$age\""); // change this path
         return response()->json(trim($output));
 //        var_dump($output);
   }

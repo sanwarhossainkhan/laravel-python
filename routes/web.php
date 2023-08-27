@@ -12,7 +12,9 @@ use App\Http\Controllers\PythonController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function (){
+   return 'hi';
+});
 
 Route::get('call-python-script/{name}/{age}', [PythonController::class, 'callPythonScript'])->name('sentiment');
 
