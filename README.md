@@ -28,7 +28,7 @@ cd .\laravel-python\
 Composer install
 ```
 
-### Step 3 : Go To  App\Http\Controllers\PythonController.php file change python script path 'F:\laragon\www\laravel-python\' replace this with your python script path
+### Step 4 : Go To  App\Http\Controllers\PythonController.php file change python script path 'F:\laragon\www\laravel-python\' replace this with your python script path
 ```
 public function callPythonScript(Request $request)
     {
@@ -38,13 +38,17 @@ public function callPythonScript(Request $request)
 
   }
 ```
+### Step 5 :  Run this command 
+```
+php artisan optimize
+```
 
-### Step 4 :  Server start 
+### Step 6 :  Server start 
 ```
 php artisan serve
 ```
 
-### Step 5 :  Check this url 
+### Step 7 :  Check this url 
 ```
 http://127.0.0.1:8000/call-python-script/typetext
 ```
