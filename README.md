@@ -58,7 +58,7 @@ php artisan serve
 http://127.0.0.1:8000/call-python-script/typetext/age
 ```
 
-### Step 8 :  check this http://127.0.0.1:8000/call-python-script/sanowar/21 
+### Step 8 :  Output 
 
 ```
 "Hello, sanowar! You are 21 years old."
